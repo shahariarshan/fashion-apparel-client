@@ -1,0 +1,32 @@
+[
+    {  
+         "id":1,
+        "image": "https://i.ibb.co/NyYLghX/Adidas-logo.png",
+        "bName": "Adidas"
+    },
+    {   
+        "id":2,
+        "image": "https://i.ibb.co/yVGc0XK/stock-vector-zara-popular-clothing-brand-and-logo-vector-illustration-2304494027.jpg",
+        "bName": "Zara"
+    },
+    {
+        "id":3,
+        "image": "https://i.ibb.co/16c22qv/square-hm-logo-design-vector-isolated-white-background-286936945.webp",
+        "bName": "H&M"
+    },
+    {
+        "id":4,
+        "image": "https://i.ibb.co/p0Gmf4c/Old-Nike-logo.jpg",
+        "bName": "Nike"
+    },
+    {
+        "id":5,
+        "image": "https://i.ibb.co/RNzMGyJ/493-gucci.jpg",
+        "bName": "Gucci"
+    },
+    {
+        "id":6,
+        "image": "https://i.ibb.co/3y7tt8r/levi-logo-4-82250bd000e1-mobile.jpg",
+        "bName": "Levi's"
+    }
+]

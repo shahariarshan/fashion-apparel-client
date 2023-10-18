@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaBackward } from 'react-icons/fa';
+import Swal from 'sweetalert2'
+
+
 
 
 const AddProducts = () => {
@@ -21,6 +24,29 @@ const AddProducts = () => {
 
         console.log(newProduct);
 
+        fetch('http://localhost:5000/products',{
+            method:"POST",
+            headers:{
+              'content-type':'application/json'
+            },
+            body:JSON.stringify(newProduct)
+          })
+          .then(res =>res.json())
+          .then(data=>{
+            console.log(data)
+            if(data.insertedId
+                ){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Do you want to Add',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                
+            }
+          })
+
+
     }
     return (
 
@@ -28,9 +54,9 @@ const AddProducts = () => {
       <div className="bg-stone-500 lg:p-12">
           <div className=" p-7 ">
            
-           <Link to='/' className="flex btn btn-disabled">
+           <Link to='/' className="flex btn btn-secondary">
           <FaBackward className="text-2xl text-black"></FaBackward>
-           <p  className="text-orange-400 font-serif text-xl ml-3">Go to home</p>
+           <span  className="text-orange-400 font-serif text-xl ml-3">Go to home</span>
           </Link>
           
           

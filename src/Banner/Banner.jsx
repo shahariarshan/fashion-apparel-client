@@ -1,6 +1,7 @@
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   useEffect(()=>{
@@ -63,12 +64,12 @@ const Banner = () => {
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
     <ul className="menu p-4  min-h-full bg-stone-300 text-black text-xl font-serif">
       {/* Sidebar content here */}
-      <li><a>Mens wear </a></li>
-      <li><a>Womans Wear</a></li>
-      <li><a>Shoes</a></li>
-      <li><a>Sunglasses</a></li>
-      <li><a>T-Shirts</a></li>
-      <li><a>Panjabi</a></li>
+      <Link to="/adidas"><a>Adidas </a></Link>
+      <li><a>Nike</a></li>
+      <li><a>H & M</a></li>
+      <li><a>Zara</a></li>
+      <li><a>Gucci</a></li>
+      <li><a>Levis</a></li>
       
     </ul>
   </div>
