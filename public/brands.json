@@ -1,63 +1,50 @@
 [
-    {  
-         "id":1,
+    {
+        "id": 1,
         "image": "https://i.ibb.co/NyYLghX/Adidas-logo.png",
         "bName": "Adidas",
-        "images1":   "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg",
-        "images2":   "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg",
-        "images3":   "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg"
-          
-          
-          
+        "images1": "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg",
+        "images2": "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg",
+        "images3": "https://i.ibb.co/930TkVc/OMEGA-Seamaster-Diver-300-M-007-Edition-7-1030x579.jpg"
     },
-    {   
-        "id":2,
+    {
+        "id": 2,
         "image": "https://i.ibb.co/yVGc0XK/stock-vector-zara-popular-clothing-brand-and-logo-vector-illustration-2304494027.jpg",
         "bName": "Zara",
-        "images": [
-            "https://i.ibb.co/mRXWRLh/0-Zara-shopping.webp",
-            "https://i.ibb.co/4YG1mtG/zara-recycle-bin-1024x684.jpg",
-            "https://i.ibb.co/tHhyQpm/371694927-0-5-1621066231011-1621066267416.webp"
-          ]
+        "images1": "https://i.ibb.co/FD6BzzJ/hbz-zara-index-shopping-1493305726.jpg",
+        "images2": "https://i.ibb.co/bLngfkz/high-angle-different-cosmetics-composition.jpg",
+        "images3": "https://i.ibb.co/BGtxXHb/assortment-cosmetics-with-copy-space.jpg"
     },
     {
-        "id":3,
+        "id": 3,
         "image": "https://i.ibb.co/16c22qv/square-hm-logo-design-vector-isolated-white-background-286936945.webp",
         "bName": "H&M",
-        "images": [
-            "https://i.ibb.co/3mCTRts/9647554-38609.jpg",
-            "https://i.ibb.co/mq4wJpX/ghi-kidsclothingstores-1664205663.jpg",
-            "https://i.ibb.co/vLdZ0fM/les-escarpins-isabel-marant-pour-h-m-696801492.webp"
-          ]
+        "images1": "https://i.ibb.co/3mCTRts/9647554-38609.jpg",
+        "images2": "https://i.ibb.co/mq4wJpX/ghi-kidsclothingstores-1664205663.jpg",
+        "images3": "https://i.ibb.co/vLdZ0fM/les-escarpins-isabel-marant-pour-h-m-696801492.webp"
     },
     {
-        "id":4,
+        "id": 4,
         "image": "https://i.ibb.co/p0Gmf4c/Old-Nike-logo.jpg",
         "bName": "Nike",
-        "images": [
-            "https://i.ibb.co/0Yz7Qqx/https-hypebeast-com-image-2022-08-air-jordan-4-thunder-2023-release-date-0.jpg",
-            "https://i.ibb.co/2vHG78S/nike-air-vapormax-flyknit-2-black-grey-942842-012-mood-1-1600x960-w1160.jpg",
-            "https://i.ibb.co/x8vQ3hv/nike-air-max-90-wheat-flax-FZ5102-299-3.webp"
-          ]
+        "images1": "https://i.ibb.co/0Yz7Qqx/https-hypebeast-com-image-2022-08-air-jordan-4-thunder-2023-release-date-0.jpg",
+        "images2": "https://i.ibb.co/2vHG78S/nike-air-vapormax-flyknit-2-black-grey-942842-012-mood-1-1600x960-w1160.jpg",
+        "images3": "https://i.ibb.co/x8vQ3hv/nike-air-max-90-wheat-flax-FZ5102-299-3.webp"
     },
     {
-        "id":5,
+        "id": 5,
         "image": "https://i.ibb.co/RNzMGyJ/493-gucci.jpg",
         "bName": "Gucci",
-        "images": [
-            "https://i.ibb.co/3vMtXvc/stylish-fashionable-biker-sunglasses-dressed-black-leather-jacket-sitting-his-custom-made-retro-moto.jpg",
-            "https://i.ibb.co/VVWhKZk/10-Most-Expensive-Gucci-Items-Ever-Sold.jpg",
-            "https://i.ibb.co/KWNY3Dn/Gucci-RTW-Fall21-032.webp"
-          ]
+        "images1": "https://i.ibb.co/km9kb8F/view-model-career-kit-still-life.jpg",
+        "images2": "https://i.ibb.co/4YydDcG/high-angle-travel-items-arrangement.jpg",
+        "images3": "https://i.ibb.co/3c6gyCq/model-career-kit-still-life.jpg"
     },
     {
-        "id":6,
+        "id": 6,
         "image": "https://i.ibb.co/3y7tt8r/levi-logo-4-82250bd000e1-mobile.jpg",
         "bName": "Levi's",
-        "images": [
-            "https://i.ibb.co/tXVwNrH/full-length-shot-emotional-lady-jeans-standing-with-peace-sign-brick-wall-pretty-shapely-woman-denim.jpg",
-            "https://i.ibb.co/mJz45R7/Main-Jean-Recycle0830-Desktop.jpg",
-            "https://i.ibb.co/CHqybwT/levis-outlet-store-02.webp"
-          ]
+        "images1": "https://i.ibb.co/pvt0jdN/composition-black-friday-elements-black-background-with-copy-space.jpg",
+        "images2": "https://i.ibb.co/1zc32ZQ/jacket-smart-phone-sunglasses-high-heeled-shoes.jpg",
+        "images3": "https://i.ibb.co/LnkdMXW/smartphone-amidst-trip-supplies.jpg"
     }
 ]

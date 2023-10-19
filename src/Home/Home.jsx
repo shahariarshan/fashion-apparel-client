@@ -2,6 +2,7 @@ import Banner from "../Banner/Banner";
 import Brands from "../Brands/Brands";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import PickUp from "../PickUp";
 import Advertisement from "./Advertisement";
 // import Products from "../Products/Products";
 
@@ -20,6 +21,9 @@ const Home = () => {
                 <Advertisement></Advertisement>
             </div>
             <div>
+            </div>
+            <div>
+                <PickUp></PickUp>
             </div>
             <div>
                 <Footer></Footer>

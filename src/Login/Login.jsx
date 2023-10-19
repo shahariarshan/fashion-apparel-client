@@ -2,7 +2,7 @@ import { Link,  useLocation,  useNavigate } from "react-router-dom";
 
 import { useContext, useState } from "react";
 
-import swal from "sweetalert";
+
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { ToastContainer, toast } from "react-toastify";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
@@ -63,11 +63,11 @@ const Login = () => {
     <div>
    <Navbar></Navbar>
       
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen mx-auto container">
 
         <div className="hero-content flex-col lg:flex-row-reverse">
 
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-200">
+          <div className="card flex-shrink-0  max-w-sm shadow-2xl bg-gray-200">
             <h1 className="text-2xl text-center pt-6 font-bold text-lime-800">LogIn Now!</h1>
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
@@ -84,7 +84,7 @@ const Login = () => {
                 <label className="label">
                   <div className="flex relative">
                   <span className="label-text">Password</span>
-                  <div  onClick={() => setShow(!show)} className="absolute mt-11 ml-60 lg:ml-72">
+                  <div  onClick={() => setShow(!show)} className="absolute mt-11 ml-56 lg:ml-72">
                     {show? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                   </div>
                   </div>

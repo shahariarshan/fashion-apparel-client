@@ -22,7 +22,7 @@ const Navbar = () => {
   const navLink = <>
     <li className="font-medium text-slate-950"><NavLink to='/'> Home</NavLink></li>
     <li className="font-medium text-slate-950"><NavLink to='/addProducts'>Add Products</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/addCart'>Add Cart</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/carts'>Add Cart</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/newProduct'>New Arrivals</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/advertisement'>Advertisement</NavLink> </li>
 
@@ -60,16 +60,12 @@ const Navbar = () => {
         {
           user ?
             <>
-              {/* <span>{user.email}</span>
-              <img src={user.photoURL} alt="" /> */}
-
-
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-bottom lg:dropdown-end">
                 <label tabIndex={0} className="btn">Profile</label>
-                <ul tabIndex={0} className="dropdown-content z-[1] menu  shadow bg-base-100 rounded-full lg:w-auto">
-                  <div className="lg:p-8">
-                  <li><span>{user.email}</span></li>
-                  <li className="rounded-full"> <img  src={user.photoURL} alt="" /></li>
+                <ul tabIndex={0} className="dropdown-content z-[1] card card-compact w-48 lg:w-auto p-2 shadow bg-primary text-primary-content">
+                  <div className="overflow-x-hidden">
+                  <li ><span className="">{user?.email}</span></li>
+                  <li className="mx-auto"> <img className="rounded-full w-24  h-16" src={user?.photoURL} alt="" /></li>
                   </div>
                 </ul>
               </div>

@@ -272,7 +272,7 @@ const Register = () => {
                  <div className="flex relative">
                  <span className="label-text">Password<small className="pl-2 text-blue-500">
                   (Minimum eight characters, at least one letter, one number and one special character) </small>:</span>
-                 <div onClick={() => setShow(!show)} className="absolute pt-16 ml-60 lg:ml-72">
+                 <div onClick={() => setShow(!show)} className="absolute pt-20 ml-48 lg:ml-72">
                  { show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                  
                  </div> 

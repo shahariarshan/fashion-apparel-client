@@ -57,19 +57,20 @@ const Banner = () => {
             <div className="drawer" >
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content items-center lg:items-start">
-    {/* Page content here */}
+    
     <label htmlFor="my-drawer" className="btn btn-accent  text-cyan-700 drawer-button">Our Items</label>
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
     <ul className="menu p-4  min-h-full bg-stone-300 text-black text-xl font-serif">
       {/* Sidebar content here */}
-      <li><a>Adidas </a></li>
-      <li><a>Nike</a></li>
-      <li><a>H & M</a></li>
-      <li><a>Zara</a></li>
-      <li><a>Gucci</a></li>
-      <li><a>Levis</a></li>
+      <li><a>T-Shirt </a></li>
+      <li><a>Shirt</a></li>
+      <li><a>Perfume</a></li>
+      <li><a>Bikers Wears</a></li>
+      <li><a>Leather Belts</a></li>
+      <li><a>Watches</a></li>
+      <li><a>Begs</a></li>
       
     </ul>
   </div>

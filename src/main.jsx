@@ -14,11 +14,10 @@ import Login from './Login/Login';
 import Register from './Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import NewArrival from './Brands/NewArrival';
-import Brands from './Brands/Brands';
-import Brand from './Brands/Brand';
 import Advertisement from './Home/Advertisement';
 import Update from './BrandsNAme/Update';
 import ProductDetails from './ProductDetails';
+import AddToCart from './AddToCart';
 
 
 const router = createBrowserRouter([
@@ -41,6 +40,7 @@ const router = createBrowserRouter([
         element:<Adidas></Adidas>,
         loader:()=>fetch(`http://localhost:5000/products`),
       },
+     
       {
         path:'/login',
         element:<Login></Login>
@@ -65,6 +65,12 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         element:<ProductDetails></ProductDetails>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+
+      },
+      {
+        path:'/carts/:id',
+        element:<AddToCart></AddToCart>,
         loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
 
       }
