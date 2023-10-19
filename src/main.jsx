@@ -17,6 +17,8 @@ import NewArrival from './Brands/NewArrival';
 import Brands from './Brands/Brands';
 import Brand from './Brands/Brand';
 import Advertisement from './Home/Advertisement';
+import Update from './BrandsNAme/Update';
+import ProductDetails from './ProductDetails';
 
 
 const router = createBrowserRouter([
@@ -27,7 +29,6 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-
         loader:()=>fetch('/brands.json')
       },
      
@@ -56,6 +57,17 @@ const router = createBrowserRouter([
         path:'/advertisement',
         element:<Advertisement></Advertisement>
       },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+      },
+      {
+        path:'/details/:id',
+        element:<ProductDetails></ProductDetails>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+
+      }
     ]
   },
 ]);

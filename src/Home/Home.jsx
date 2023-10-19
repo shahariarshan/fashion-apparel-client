@@ -11,17 +11,15 @@ const Home = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            
+
             <div >
                 <Banner></Banner>
-              
+
                 <Brands></Brands>
 
                 <Advertisement></Advertisement>
-                
             </div>
             <div>
-            
             </div>
             <div>
                 <Footer></Footer>
