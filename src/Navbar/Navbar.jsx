@@ -6,8 +6,8 @@ const Navbar = () => {
     <li className="font-medium text-slate-950"><NavLink  to='/'> Home</NavLink></li>
     <li className="font-medium text-slate-950"><NavLink to='/addProducts'>Add Products</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/addCart'>Add Cart</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/shop'>Shop</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/New Arrivals'>New Arrivals</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/newProduct'>New Arrivals</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/advertisement'>Advertisement</NavLink> </li>
    
 
 

@@ -2,6 +2,7 @@ import Banner from "../Banner/Banner";
 import Brands from "../Brands/Brands";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import Advertisement from "./Advertisement";
 // import Products from "../Products/Products";
 
 const Home = () => {
@@ -13,8 +14,10 @@ const Home = () => {
             
             <div >
                 <Banner></Banner>
-                {/* <Products></Products> */}
+              
                 <Brands></Brands>
+
+                <Advertisement></Advertisement>
                 
             </div>
             <div>

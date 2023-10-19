@@ -13,6 +13,10 @@ import Adidas from './BrandsNAme/Adidas';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import NewArrival from './Brands/NewArrival';
+import Brands from './Brands/Brands';
+import Brand from './Brands/Brand';
+import Advertisement from './Home/Advertisement';
 
 
 const router = createBrowserRouter([
@@ -43,7 +47,15 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
-      }
+      },
+      {
+        path:'/newProduct',
+        element:<NewArrival></NewArrival>
+      },
+      {
+        path:'/advertisement',
+        element:<Advertisement></Advertisement>
+      },
     ]
   },
 ]);

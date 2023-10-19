@@ -64,7 +64,7 @@ const Banner = () => {
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
     <ul className="menu p-4  min-h-full bg-stone-300 text-black text-xl font-serif">
       {/* Sidebar content here */}
-      <Link to="/adidas"><a>Adidas </a></Link>
+      <li><a>Adidas </a></li>
       <li><a>Nike</a></li>
       <li><a>H & M</a></li>
       <li><a>Zara</a></li>
