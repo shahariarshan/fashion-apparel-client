@@ -35,20 +35,6 @@ const AuthProvider = ({ children }) => {
             })
     }
 
-    // facebookPopUp 
-    //    const facebookPopUp =()=>{
-    //     return signInWithPopup(auth, facebookProvider)
-    //     .then(result => {
-    //         console.log(result.user)
-    //     })
-    //     .catch(error => {
-    //         console.error(error)
-    //     })
-    //    }
-
-
-
-
     const signIn = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
@@ -68,10 +54,6 @@ const AuthProvider = ({ children }) => {
             unsubscribe()
         }
     }, [])
-
-
-
-
     const info = {
         user,
         loading,

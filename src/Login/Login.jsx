@@ -116,10 +116,7 @@ const Login = () => {
                     <button onClick={handelGoogleSignIn} className="btn w-80  text-black"> <FaGoogle ></FaGoogle>Login  with Google</button>
                   </div>
                   <ToastContainer />
-                  <div className=" text-center gap-2">
-                    
-                    <button className="btn w-80  text-black">  <FaFacebook></FaFacebook>Login  with Facebook</button>
-                  </div>
+                 
                  
                 </div>
                 {
