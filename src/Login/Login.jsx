@@ -1,6 +1,9 @@
 import { Link,  useLocation,  useNavigate } from "react-router-dom";
 
 import { useContext, useState } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
@@ -14,6 +17,9 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Login = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   
   const {signIn, googleSign} = useContext(AuthContext)
   const location =useLocation()
@@ -63,11 +69,11 @@ const Login = () => {
     <div>
    <Navbar></Navbar>
       
-      <div className="hero min-h-screen mx-auto container">
+      <div className="hero" data-aos="fade-down-right">
 
         <div className="hero-content flex-col lg:flex-row-reverse">
 
-          <div className="card flex-shrink-0  max-w-sm shadow-2xl bg-gray-200">
+          <div className="card flex-shrink-0   shadow-2xl bg-gray-200">
             <h1 className="text-2xl text-center pt-6 font-bold text-lime-800">LogIn Now!</h1>
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">

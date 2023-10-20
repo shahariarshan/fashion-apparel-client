@@ -32,13 +32,13 @@ const Update = () => {
           .then(res =>res.json())
           .then(data=>{
             console.log(data)
-            if(data.modifiedCount > 0
+            if(data. modifiedCount > 0
                 ){
                     Swal.fire({
-                        title: 'Success!',
-                        text: 'Do you want to Update',
+                        title: 'Update Success!',
+                        text: 'Do you want to Update?',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Great Job'
                       })
                 
             }

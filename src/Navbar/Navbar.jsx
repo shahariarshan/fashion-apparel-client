@@ -2,9 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
 
+
 const Navbar = () => {
 
-
+  
 
   const { user, logOut } = useContext(AuthContext)
   const handelSignOut = () => {
@@ -25,6 +26,7 @@ const Navbar = () => {
     <li className="font-medium text-slate-950"><NavLink to='/carts'>Add Cart</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/newProduct'>New Arrivals</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/advertisement'>Advertisement</NavLink> </li>
+    
 
 
 
@@ -33,7 +35,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar h-24 rounded-xl bg-gray-200">
+    <div className="navbar h-24 rounded-xl  bg-gray-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,10 +64,10 @@ const Navbar = () => {
             <>
               <div className="dropdown dropdown-bottom lg:dropdown-end">
                 <label tabIndex={0} className="btn">Profile</label>
-                <ul tabIndex={0} className="dropdown-content z-[1] card card-compact w-48 lg:w-auto p-2 shadow bg-primary text-primary-content">
+                <ul tabIndex={0} className="dropdown-content z-[1] card card-compact w-28 p-2 shadow bg-primary text-primary-content">
                   <div className="overflow-x-hidden">
-                  <li ><span className="">{user?.email}</span></li>
-                  <li className="mx-auto"> <img className="rounded-full w-24  h-16" src={user?.photoURL} alt="" /></li>
+                    <li ><span className="">{user?.email}</span></li>
+                    <li className="mx-auto"> <img className="rounded-full" src={user?.photoURL} alt="" /></li>
                   </div>
                 </ul>
               </div>
