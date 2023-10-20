@@ -1,15 +1,12 @@
 import { Link,  useLocation,  useNavigate } from "react-router-dom";
-
 import { useContext, useState } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-
-
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { ToastContainer, toast } from "react-toastify";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
-import Navbar from "../Navbar/Navbar";
+
 import { AuthContext } from "../Provider/AuthProvider";
 
 
@@ -28,9 +25,12 @@ const Login = () => {
     googleSign()
     .then(result=>{
       console.log(result.user)
+      navigate(location?. state? location.state : '/')
+
     })
     .catch( error => {
       console.error(error)
+
     })
   }
 
@@ -38,7 +38,8 @@ const Login = () => {
   
   const [loginError,setLogInError]= useState('')
   const [show,setShow] =useState(false)
-  const naviGate = useNavigate();
+  const navigate = useNavigate();
+  
 
   
 
@@ -56,7 +57,7 @@ const Login = () => {
       .then(result => {
         console.log(result.user)
         e.target.reset();
-        naviGate(location?. state? location.state : '/')
+        navigate(location?.state? location.state : '/')
       })
       .catch(error => {
         console.error(error)
@@ -67,7 +68,7 @@ const Login = () => {
 
   return (
     <div>
-   <Navbar></Navbar>
+
       
       <div className="hero" data-aos="fade-down-right">
 

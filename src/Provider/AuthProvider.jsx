@@ -4,7 +4,8 @@ import app from "../firebase/Firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext(null);
 const auth = getAuth(app)
-// import { FacebookAuthProvider, signInWithRedirect } from "firebase/auth";
+const provider = new GoogleAuthProvider();
+
 
 
 
@@ -13,16 +14,14 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-
     const userCreate = (email, password) => {
-        
         return createUserWithEmailAndPassword(auth, email, password)
 
-      
+
     }
 
     // google provider 
-    const provider = new GoogleAuthProvider();
+   
     // const facebookProvider = new FacebookAuthProvider();
     const googleSign = () => {
         setLoading(true)
@@ -37,18 +36,18 @@ const AuthProvider = ({ children }) => {
     }
 
     // facebookPopUp 
-//    const facebookPopUp =()=>{
-//     return signInWithPopup(auth, facebookProvider)
-//     .then(result => {
-//         console.log(result.user)
-//     })
-//     .catch(error => {
-//         console.error(error)
-//     })
-//    }
+    //    const facebookPopUp =()=>{
+    //     return signInWithPopup(auth, facebookProvider)
+    //     .then(result => {
+    //         console.log(result.user)
+    //     })
+    //     .catch(error => {
+    //         console.error(error)
+    //     })
+    //    }
 
 
-   
+
 
     const signIn = (email, password) => {
         setLoading(true)
@@ -80,10 +79,10 @@ const AuthProvider = ({ children }) => {
         signIn,
         googleSign,
         logOut,
-        
+
     }
     return (
-        <AuthContext.Provider value={info}>
+        <AuthContext.Provider state={true} value={info}>
             {children}
         </AuthContext.Provider>
     );

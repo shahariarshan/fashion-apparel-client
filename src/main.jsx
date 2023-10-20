@@ -18,6 +18,7 @@ import Advertisement from './Home/Advertisement';
 import Update from './BrandsNAme/Update';
 import ProductDetails from './ProductDetails';
 import AddToCart from './AddToCart';
+import PrivateRoute from './PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
      
       {
         path:'/addProducts',
-        element:<AddProducts></AddProducts>
+        element:<PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
         path:'/brands/:bName',
-        element:<Adidas></Adidas>,
+        element:<PrivateRoute><Adidas></Adidas></PrivateRoute>,
         loader:()=>fetch(`http://localhost:5000/products`),
       },
      
@@ -51,11 +52,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/newProduct',
-        element:<NewArrival></NewArrival>
+        element:<PrivateRoute><NewArrival></NewArrival></PrivateRoute>
       },
       {
         path:'/advertisement',
-        element:<Advertisement></Advertisement>
+        element:<PrivateRoute><Advertisement></Advertisement></PrivateRoute>
       },
       {
         path:'/update/:id',
@@ -69,9 +70,9 @@ const router = createBrowserRouter([
 
       },
       {
-        path:'/carts/:id',
-        element:<AddToCart></AddToCart>,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        path:'/carts',
+        element:<PrivateRoute><AddToCart></AddToCart></PrivateRoute>,
+        loader:() => fetch('http://localhost:5000/carts')
 
       }
     ]

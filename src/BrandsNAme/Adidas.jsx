@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+
 import { useEffect, useState } from "react";
 import BrandSlider from "../BrandSlider";
 
@@ -25,7 +25,7 @@ const Adidas = () => {
     return (
         <div>
 
-            <Navbar></Navbar>
+          
             
              <h1 className="text-4xl text-center mt-4">Branded Items</h1>
              <div>
