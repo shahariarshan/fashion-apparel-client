@@ -51,7 +51,7 @@ const AddProducts = () => {
     return (
 
         
-      <div className="bg-stone-500 lg:p-12">
+      <div className="bg-stone-500 px-10 lg:p-12">
           <div className=" p-7 ">
            
            <Link to='/' className="flex btn btn-secondary">

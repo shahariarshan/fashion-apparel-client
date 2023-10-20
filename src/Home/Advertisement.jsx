@@ -3,14 +3,15 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 
 
+
 const Advertisement = () => {
     useEffect(()=>{
         Aos.init();
       },[])
     return (
         <div>
-            {/* <Navbar></Navbar> */}
-            <h1 className="text-4xl font-bold text-center ">Advertise<span className="text-red-500">Ment</span></h1>
+     
+            <h1 className="text-4xl font-bold text-center text-fuchsia-900 ">Advertise<span className="text-red-500">Ment</span></h1>
             <div className="hero min-h-screen  lg:p-40 " data-aos="flip-left">
            
            <div className="hero-content flex-col lg:flex-row-reverse">

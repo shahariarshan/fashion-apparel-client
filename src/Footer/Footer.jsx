@@ -3,7 +3,7 @@ import PickUp from "../PickUp";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-neutral text-neutral-content">
+        <footer className="footer p-10 bg-neutral text-neutral-content mt-6">
         <nav>
           <header className="footer-title">Services</header> 
           <a className="link link-hover">Branding</a>

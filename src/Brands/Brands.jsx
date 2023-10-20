@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Brand from "./Brand";
 import { useState } from "react";
 
+
 const Brands = () => {
     const cards =useLoaderData();
     const [items,setItems]=useState(cards)

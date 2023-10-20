@@ -1,10 +1,18 @@
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
+import Marquee from "react-fast-marquee";
 
 const Review = () => {
+    useEffect(()=>{
+        Aos.init();
+      },[])
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-6">
-
-            <div className="card  bg-red-400 shadow-xl ">
+        
+        <div  data-aos="zoom-in-right ">
+ <Marquee>
+            <div className="card  bg-red-400 shadow-xl ml-5  ">
                 <figure className="px-10 pt-10">
                     <img src="https://i.ibb.co/d7Bzksd/portrait-young-smiling-handsome-model-man-dressed-gray-casual-hoodie-clothes-posing-white-wall-isola.jpg" alt="Shoes" className="rounded-full w-24" />
                 </figure>
@@ -20,7 +28,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-            <div className="card  bg-red-400 shadow-xl">
+            <div className="card  bg-red-400 shadow-xl ml-5">
                 <figure className="px-10 pt-10">
                     <img src="https://i.ibb.co/4F9Lc3r/portrait-smiling-blonde-woman.jpg" alt="Shoes" className="rounded-full w-24" />
                 </figure>
@@ -36,7 +44,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-            <div className="card  bg-red-400 shadow-xl">
+            <div className="card  bg-red-400 shadow-xl ml-5">
                 <figure className="px-10 pt-10">
                     <img src="https://i.ibb.co/smsVqVH/young-happy-woman-with-ok-sign-white-shirt.jpg" alt="Shoes" className="rounded-full w-24" />
                 </figure>
@@ -52,7 +60,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-            <div className="card  bg-red-400 shadow-xl">
+            <div className="card  bg-red-400 shadow-xl ml-5">
                 <figure className="px-10 pt-10">
                     <img src="https://i.ibb.co/d7Bzksd/portrait-young-smiling-handsome-model-man-dressed-gray-casual-hoodie-clothes-posing-white-wall-isola.jpg" alt="Shoes" className="rounded-full w-24" />
                 </figure>
@@ -68,6 +76,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
+            </Marquee>
 
         </div>
 

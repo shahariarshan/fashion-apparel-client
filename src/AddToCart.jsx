@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 
 
 const AddToCart = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
     const cardDataLoad =useLoaderData()
     const [carts,setCarts]=useState(cardDataLoad)
 
@@ -49,12 +55,13 @@ const AddToCart = () => {
 
     
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:px-24 pt-7" data-aos="zoom-in-up">
           
           {
             carts.map(dataLoad => <div key={dataLoad._id} className="card card-compact  bg-gray-300 shadow-xl ">
             <figure><img className="p-7" src={dataLoad.photo} /></figure>
-            <div className="card-body">
+           <div >
+           <div className="card-body ">
                 <div className=" text-center">
                     <p><span className="text-xl font-serif  text-red-600"></span><span className="font-medium"><span className="text-2xl">{dataLoad.bName}</span></span></p>
                     <p><span className="text-xl font-serif font-medium text-red-600">Product Name:</span>{dataLoad.name}</p>
@@ -72,6 +79,7 @@ const AddToCart = () => {
                 <button onClick={()=>handelDelete(dataLoad._id)} className="btn btn-secondary">Delete</button>
                 
             </div>
+           </div>
         </div>)
           }
         </div>

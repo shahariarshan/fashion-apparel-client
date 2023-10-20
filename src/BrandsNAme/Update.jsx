@@ -1,9 +1,15 @@
 import { FaBackward } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Update = () => {
+    useEffect(()=>{
+        Aos.init();
+      },[])
     const loadData = useLoaderData();
     console.log(loadData);
     const  { name, bName, type, description,_id, price, rating, photo } =loadData
@@ -46,7 +52,7 @@ const Update = () => {
         }
 
     return (
-        <div className="bg-stone-500 lg:p-12">
+        <div className="bg-stone-500 lg:p-12" data-aos="zoom-in-right">
             <div className=" p-7 ">
 
                 <Link to='/' className="flex btn btn-secondary">

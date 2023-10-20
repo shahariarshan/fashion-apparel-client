@@ -19,7 +19,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto h-screen dark:bg-black container">
            
                 
-               <div>
+               <div className="mt-5">
                <Banner></Banner>
                </div>
 

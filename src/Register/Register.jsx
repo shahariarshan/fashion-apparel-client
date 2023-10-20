@@ -158,6 +158,7 @@ import swal from "sweetalert";
 import { Link } from "react-router-dom";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
@@ -205,7 +206,12 @@ const Register = () => {
 
           .catch(error => console.error(error))
 
-        toast("Create Account Successfully , Please Login")
+          Swal.fire({
+            title: 'Account created Success!',
+            text: 'Please Log in',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
        
 
       }

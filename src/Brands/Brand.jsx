@@ -8,6 +8,7 @@ const Brand = ({b}) => {
     useEffect(()=>{
         Aos.init();
       },[])
+    // eslint-disable-next-line react/prop-types
     const {image} =b;
 
     return (
