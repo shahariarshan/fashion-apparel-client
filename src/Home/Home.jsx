@@ -38,7 +38,7 @@ const Home = () => {
                 <Review></Review>
                 </div>
                 
-               <div className="px-9">
+               <div className="">
                <Footer></Footer>
                </div>
            
