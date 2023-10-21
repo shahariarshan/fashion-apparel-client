@@ -44,13 +44,7 @@ const Adidas = () => {
                                     <p><span className="text-xl font-serif font-medium text-red-600">Product Name:</span>{product.name}</p>
                                     <h2 className="mt-2" ><span className="text-xl font-serif font-medium text-red-600">Product-Type:</span>{product.type}</h2>
                                     <h2 className="mt-2"><span className="text-xl font-serif font-medium text-red-600">Price:</span>{product.price}</h2>
-                                    <div className="rating mt-2">
-                                        <input type="radio" name="rating-1" className="mask mask-star" />
-                                        <input type="radio" name="rating-1" className="mask mask-star" checked />
-                                        <input type="radio" name="rating-1" className="mask mask-star" />
-                                        <input type="radio" name="rating-1" className="mask mask-star" />
-                                        <input type="radio" name="rating-1" className="mask mask-star" />
-                                    </div>
+                                    <h2 className="text-xl font-serif mt-2 font-medium text-red-600">Rating:{product.rating}/5</h2>
 
                                 </div>
                                 <div className="card-actions justify-between">

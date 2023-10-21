@@ -1,5 +1,6 @@
 
 
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import Brands from "../Brands/Brands";
 import Footer from "../Footer/Footer";
@@ -11,12 +12,17 @@ import Advertisement from "./Advertisement";
 
 
 const Home = () => {
+    <Helmet>
+    <title>
+    Fashion and Apparel| Home
+    </title>
+</Helmet>
     
 
 
    
     return (
-        <div className="max-w-6xl mx-auto h-screen dark:bg-black container">
+        <div className="max-w-6xl mx-auto h-screen  container">
            
                 
                <div className="mt-5">

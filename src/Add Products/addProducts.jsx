@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { FaBackward } from 'react-icons/fa';
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 
 
 
 const AddProducts = () => {
+
+    <Helmet>
+    <title>
+    Fashion and Apparel| Product Add
+    </title>
+</Helmet>
 
     const handleAddProduct = event => {
         event.preventDefault();
@@ -24,7 +31,7 @@ const AddProducts = () => {
 
         console.log(newProduct);
 
-        fetch('http://localhost:5000/products',{
+        fetch('https://fashion-apparel-server-fs716ct58.vercel.app/products',{
             method:"POST",
             headers:{
               'content-type':'application/json'
@@ -51,7 +58,7 @@ const AddProducts = () => {
     return (
 
         
-      <div className="bg-stone-500 px-10 lg:p-12">
+      <div className="bg-stone-500  lg:p-12">
           <div className=" p-7 ">
            
            <Link to='/' className="flex btn btn-secondary">

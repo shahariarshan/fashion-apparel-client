@@ -159,6 +159,7 @@ import { Link } from "react-router-dom";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -166,6 +167,11 @@ import Swal from "sweetalert2";
 
 
 const Register = () => {
+  <Helmet>
+    <title>
+    Fashion and Apparel| Registration
+    </title>
+</Helmet>
   
   const { userCreate } = useContext(AuthContext)
   const [regError,setRegError]=useState('')

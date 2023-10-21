@@ -1,10 +1,16 @@
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
 const Advertisement = () => {
+    <Helmet>
+    <title>
+    Fashion and Apparel| Advertisement
+    </title>
+</Helmet>
     useEffect(()=>{
         Aos.init();
       },[])

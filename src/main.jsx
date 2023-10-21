@@ -19,19 +19,21 @@ import Update from './BrandsNAme/Update';
 import ProductDetails from './ProductDetails';
 import AddToCart from './AddToCart';
 import PrivateRoute from './PrivateRoute';
+import ErrorPage from './Error/ErrorPage';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
         element:<Home></Home>,
         loader:()=>fetch('/brands.json')
       },
-     
       {
         path:'/addProducts',
         element:<PrivateRoute><AddProducts></AddProducts></PrivateRoute>
@@ -39,8 +41,12 @@ const router = createBrowserRouter([
       {
         path:'/brands/:bName',
         element:<PrivateRoute><Adidas></Adidas></PrivateRoute>,
-        loader:()=>fetch(`http://localhost:5000/products`),
+        loader:()=>fetch(`https://fashion-apparel-server-fs716ct58.vercel.app/products`),
       },
+      {
+        path:'/freshItems',
+        element:<NewArrival></NewArrival>
+       },
      
       {
         path:'/login',
@@ -51,28 +57,24 @@ const router = createBrowserRouter([
         element:<Register></Register>
       },
       {
-        path:'/newProduct',
-        element:<PrivateRoute><NewArrival></NewArrival></PrivateRoute>
-      },
-      {
         path:'/advertisement',
         element:<PrivateRoute><Advertisement></Advertisement></PrivateRoute>
       },
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params}) => fetch(`https://fashion-apparel-server-fs716ct58.vercel.app/products/${params.id}`)
       },
       {
         path:'/details/:id',
         element:<ProductDetails></ProductDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params}) => fetch(`https://fashion-apparel-server-fs716ct58.vercel.app/products/${params.id}`)
 
       },
       {
         path:'/carts',
         element:<PrivateRoute><AddToCart></AddToCart></PrivateRoute>,
-        loader:() => fetch('http://localhost:5000/carts')
+        loader:() => fetch('https://fashion-apparel-server-fs716ct58.vercel.app/carts')
 
       }
     ]
@@ -81,8 +83,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )

@@ -8,12 +8,18 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
 
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
 
 
 const Login = () => {
+  <Helmet>
+    <title>
+    Fashion and Apparel| Login
+    </title>
+</Helmet>
   useEffect(()=>{
     Aos.init();
   },[])

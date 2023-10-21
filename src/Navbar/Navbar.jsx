@@ -1,9 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
+import { useEffect, useState } from "react";
 
 
 const Navbar = () => {
+
+
+  const [theme, setTheme] = useState('light')
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+    else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme]);
+
+  const handelTheme = () => {
+    setTheme(theme === "dark" ? "Light" : "dark")
+  }
 
   
 
@@ -24,9 +40,14 @@ const Navbar = () => {
     <li className="font-medium text-slate-950"><NavLink to='/'> Home</NavLink></li>
     <li className="font-medium text-slate-950"><NavLink to='/addProducts'>Add Products</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/carts'>Add Cart</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/newProduct'>New Arrivals</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/freshItems'>New Items</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/advertisement'>Advertisement</NavLink> </li>
-    
+    <div className="form-control">
+            <label className="label cursor-pointer">
+             
+              <input onClick={handelTheme} type="checkbox" className="toggle" checked />
+            </label>
+          </div>
 
 
 

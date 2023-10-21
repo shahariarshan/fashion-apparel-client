@@ -3,15 +3,21 @@ import Swal from "sweetalert2";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const ProductDetails = () => {
+  <Helmet>
+    <title>
+    Fashion and Apparel| Product Details
+    </title>
+</Helmet>
   useEffect(()=>{
     Aos.init();
   },[])
   const load = useLoaderData()
   const handelCart = () => {
-    fetch('http://localhost:5000/carts', {
+    fetch('https://fashion-apparel-server-fs716ct58.vercel.app/carts', {
       method: "POST",
       headers: {
         'content-type': 'application/json'
@@ -46,6 +52,7 @@ const ProductDetails = () => {
           <Link className="card-actions justify-start mt-4 ">
             <button onClick={handelCart} className="btn btn-primary">Add to Cart</button>
           </Link>
+          
     </div>
   </div>
 </div>
