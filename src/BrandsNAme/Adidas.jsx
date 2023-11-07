@@ -7,8 +7,8 @@ import BrandSlider from "../BrandSlider";
 
 
 const Adidas = () => {
-    const { bName, photo, name, description, type, price } = useParams()
-    console.log(bName, photo, name, description, price, type);
+    const { bName } = useParams()
+    console.log(bName);
     const loadedData = useLoaderData()
     console.log(loadedData)
     const [slider,setSlider]=useState([])

@@ -23,7 +23,7 @@ const NewArrival = () => {
       <div  >
         <h2 className="text-4xl text-center text-lime-400 font-serif font-semibold mt-5">Coming <span className="text-red-600"> Soon....</span></h2>
         
-        <Marquee className="mt-10 gap-5">
+        <Marquee className="mt-10 ">
         <div className="card w-96 bg-orange-400 shadow-xl ">
   <figure><img src="https://i.ibb.co/9qZtbzG/30317.jpg" /></figure>
   

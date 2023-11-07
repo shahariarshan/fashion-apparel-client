@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Brands = () => {
     const cards =useLoaderData();
+    
     const [items,setItems]=useState(cards)
 
      
