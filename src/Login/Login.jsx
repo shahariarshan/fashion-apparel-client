@@ -3,12 +3,13 @@ import { useContext, useState } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-import { FaGoogle, FaFacebook } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
 import { ToastContainer, toast } from "react-toastify";
 import { FaEyeSlash,FaEye } from 'react-icons/fa';
 
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+
 
 
 
@@ -20,6 +21,7 @@ const Login = () => {
     Fashion and Apparel| Login
     </title>
 </Helmet>
+const from = location.state?.from?.pathname|| '/'
   useEffect(()=>{
     Aos.init();
   },[])
@@ -31,7 +33,7 @@ const Login = () => {
     googleSign()
     .then(result=>{
       console.log(result.user)
-      navigate(location?. state? location.state : '/')
+      // navigate(location?. state? location.state : '/')
 
     })
     .catch( error => {
@@ -51,11 +53,11 @@ const Login = () => {
 
   const handleLogin = e => {
     e.preventDefault();
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
     const email = form.get('email')
     const password = form.get('password')
-    console.log(email, password)
+    // console.log(email, password)
 
 
 
@@ -63,7 +65,8 @@ const Login = () => {
       .then(result => {
         console.log(result.user)
         e.target.reset();
-        navigate(location?.state? location.state : '/')
+        // navigate(location?.state? location.state : '/')
+        navigate (from,{replace:true})
       })
       .catch(error => {
         console.error(error)
